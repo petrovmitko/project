@@ -1,0 +1,41 @@
+.prnt{
+    display: flex;
+    justify-content: center;
+}
+img{
+    margin-top: 86px;
+    width: 50%;
+    height: 50%;  
+}
+a{
+    width: 140px;
+    height: 30px;
+    margin: 20px;
+    border: 4px solid black;
+    border-radius: 10px;
+    background: #ebebe0;
+    color: black;
+    text-align: center;
+    padding-top: 8px;
+    outline: none;
+    text-decoration: none;
+    font-family: 'Abel', sans-serif;
+    transition: transform 0.5s;
+}
+a:hover{
+    cursor: pointer;
+    background: black;
+    color: white;
+}
+a:active{
+    background: #ebebe0;
+    color: black;
+    transform: rotate(4deg);
+}
+@media only screen and (max-width: 900px) {
+    a{
+        width: 80px;
+        height: 20px;
+        font-size: 10px;
+    }
+}

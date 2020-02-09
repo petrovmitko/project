@@ -1,0 +1,18 @@
+<div class="header">
+    <div class="menu-bar" (click)="menuHandler()">
+        <div class="bars" [ngClass]="!menuCheck ? 'bars' : 'rotatefoo'"></div>
+        <div class="bars" [ngClass]="!menuCheck ? 'bars' : 'rotatebar'"></div>
+        <div class="bars" [ngClass]="!menuCheck ? 'bars' : 'remover'"></div>
+    </div>
+    <ul class="left" [ngClass]="!menuCheck ? 'disp' : 'left'">
+        <li><a routerLink="/main">Home</a></li>
+        <li><a routerLink="/about">About</a></li>
+        <li><a routerLink="/contacts">Contacts</a></li>
+    </ul>
+    <ul class="right" [ngClass]="!menuCheck ? 'disp' : 'right'">
+        <li><a routerLink="/profil">Profil</a></li>
+        <li><a routerLink="/login">Login</a></li>
+        <li><a routerLink="/register">Register</a></li>
+        <li><a routerLink="/logout">Logout</a></li>
+    </ul>
+</div>

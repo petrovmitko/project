@@ -1,0 +1,41 @@
+<div class="cards">
+    <div class="common first">
+        <div class="hotel">
+            <button class="btnHotelCar" [ngClass]="!hotelORCar ? 'fade' : 'onTop'" (click)="hotelCheck()">HOTEL</button>
+            <button class="btnHotelCar" [ngClass]="hotelORCar ? 'fade' : 'onTop'" (click)="carCheck()">CAR RENTAL</button>
+            <form action="#" [ngClass]="!hotelORCar ? 'hidden' : 'shown'">
+                <select class="hotelOptions" name="hotel">
+                    <option *ngFor="let hotel of hotels" [value]="hotel" >{{ hotel | uppercase}}</option>
+                </select>
+                <select name="check-in" class="check-in"></select>
+                <select name="check-out" class="check-out"></select>
+                <select name="guests" class="guests">
+                <option *ngFor="let i of numbers" [value]="Guests">{{ i }}</option>
+                </select>
+            </form>
+            <form action="#" [ngClass]="hotelORCar ? 'hidden' : 'shown'">
+                <select class="hotelOptions" name="car">
+                    <option *ngFor="let car of cars" [value]="car" >{{ car }} persons</option>
+                </select>
+                <select name="check-in" class="check-in"></select>
+                <select name="check-out" class="check-out"></select>
+                <select name="passangers" class="passangers">
+                <option *ngFor="let pass of passangers" [value]="Guests">{{ pass }}</option>
+                </select>
+            </form>
+        </div>
+        <div class="one"><a class="checkBtn" href="#">CHECK NOW</a></div>
+    </div>
+    <div class="common second">
+        <div class="two">
+            <p class="leftP">{{ where[0] }}</p>
+            <p class="rightP">{{ howMuch[0] }}$</p>
+        </div>
+    </div>
+    <div class="common last">
+        <div class="three">
+            <p class="leftP">{{ where[1] }}</p>
+            <p class="rightP">{{ howMuch[1] }}$</p>
+        </div>
+    </div>
+</div>

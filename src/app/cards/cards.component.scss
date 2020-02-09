@@ -1,0 +1,121 @@
+.cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 420px;
+}
+.common{
+    width: 280px;
+    height: 340px;
+    background: whitesmoke;
+    margin-right: 80px;
+    margin-bottom: 30px;
+    position: relative;
+    
+}
+.second{
+    background: url('/assets/img/maldives.jpg');
+    background-size: auto 100%;
+    overflow: hidden;
+}
+.last{
+    background: url('/assets/img/cancun.jpg');
+    background-size: auto 100%;
+    overflow: hidden;
+}
+.one, .two, .three{
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    bottom: 0px;
+}
+.one{
+    background:  #9999ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.two{
+    background: #bbff33;
+}
+.three{
+    background: #ED553B;
+}
+.leftP{
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    font-size: 16px;
+    font-family: 'Sintony', sans-serif;
+    color: white;
+}
+.rightP{
+    position: absolute;
+    top: 6px;
+    right: 20px;
+    font-size: 20px;
+    font-family: 'Sintony', sans-serif;
+    color: white;
+}
+.checkBtn{
+    width: 100px;
+    height: 10px;
+    text-decoration: none;
+    color: white;
+    border: 1px solid;
+    padding-top: 8px;
+    padding-bottom: 12px;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: center;
+    font-family: 'Sintony', sans-serif;
+}
+.checkBtn:hover{
+    background: #ffd633;
+    margin-bottom: 2px;
+    color: #404040;
+}
+.hotelOptions, .check-in, .check-out, .guests, .passangers{
+    width: 240px;
+    height: 30px;
+    margin-top: 20px;
+    margin-left: 20px;
+    background: greenyellow;
+    font-family: 'Sintony', sans-serif;
+}
+.btnHotelCar{
+    width: 50%;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    color: #404040;
+}
+.fade{
+    background: yellow;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+.onTop{
+    background-color: whitesmoke;
+    cursor: not-allowed;
+}
+.hidden{
+    display: none;
+}
+.shown{
+    display: block;
+}
+@media only screen and (max-width: 900px) {
+    .cards{
+        display: block;
+        margin-top: 120px;
+    }
+    .common{
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+    }
+}
