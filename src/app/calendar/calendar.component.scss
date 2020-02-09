@@ -1,0 +1,76 @@
+.frame{
+    width: 310px;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 200px;
+    left: 0px;
+    z-index: 20;
+}
+table{
+    width: 300px;
+    height: auto;
+    font-family: 'Sintony', sans-serif;
+    background: white;
+}
+td{
+    width: 30px;
+    height: 30px;
+    background: #2E6178;
+    color: white;
+    border-radius: 6px;
+    text-align: center;
+}
+td:hover{
+    background: whitesmoke;
+    color: #2E6178;
+    cursor: pointer;
+}
+.year{
+    width: 300px;
+    height: 60px;
+    background: #2E6178;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    font-family: 'Sintony', sans-serif;
+}
+.up{
+    width: 40px;
+    height: 60px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    background: white;
+    color: black;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+.down{
+    width: 40px;
+    height: 60px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    background: white;
+    color: black;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.down:hover{
+    cursor: pointer;
+    background: #FF5733;
+    color: whitesmoke;
+}
+.up:hover{
+    cursor: pointer;
+    background: #FF5733;
+    color: whitesmoke;
+}

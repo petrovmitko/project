@@ -4,21 +4,31 @@
             <button class="btnHotelCar" [ngClass]="!hotelORCar ? 'fade' : 'onTop'" (click)="hotelCheck()">HOTEL</button>
             <button class="btnHotelCar" [ngClass]="hotelORCar ? 'fade' : 'onTop'" (click)="carCheck()">CAR RENTAL</button>
             <form action="#" [ngClass]="!hotelORCar ? 'hidden' : 'shown'">
+                <label for="hotel">Hotel</label>
                 <select class="hotelOptions" name="hotel">
                     <option *ngFor="let hotel of hotels" [value]="hotel" >{{ hotel | uppercase}}</option>
                 </select>
-                <select name="check-in" class="check-in"></select>
-                <select name="check-out" class="check-out"></select>
+                <app-calendar [ngClass]="!toggle ? 'hidden' : 'shown'"></app-calendar>
+                <label>Check-in date</label>
+                <div class="check-in" (click)="showCalendar()"></div>
+                <label>Check-out date</label>
+                <div class="check-out" (click)="showCalendar()"></div>
+                <label for="guests">Gests</label>
                 <select name="guests" class="guests">
                 <option *ngFor="let i of numbers" [value]="Guests">{{ i }}</option>
                 </select>
             </form>
             <form action="#" [ngClass]="hotelORCar ? 'hidden' : 'shown'">
+                <label for="car">Choose a car</label>
                 <select class="hotelOptions" name="car">
                     <option *ngFor="let car of cars" [value]="car" >{{ car }} persons</option>
                 </select>
-                <select name="check-in" class="check-in"></select>
-                <select name="check-out" class="check-out"></select>
+                <app-calendar [ngClass]="!toggle ? 'hidden' : 'shown'"></app-calendar>
+                <label>Check-in date</label>
+                <div class="check-in" (click)="showCalendar()"></div>
+                <label>Check-out date</label>
+                <div class="check-out" (click)="showCalendar()"></div>
+                <label for="passangers">Passengers</label>
                 <select name="passangers" class="passangers">
                 <option *ngFor="let pass of passangers" [value]="Guests">{{ pass }}</option>
                 </select>
@@ -28,14 +38,19 @@
     </div>
     <div class="common second">
         <div class="two">
-            <p class="leftP">{{ where[0] }}</p>
-            <p class="rightP">{{ howMuch[0] }}$</p>
+            <p *ngIf="loggedIn" class="leftP">{{ where[0] }}</p>
+            <p *ngIf="loggedIn" class="rightP">{{ howMuch[0] }}$</p>
+            <p *ngIf="!loggedIn" class="topP">Only registered user can see our prices</p>
+            <p *ngIf="!loggedIn" class="bottomP"><a routerLink="/register">Join now</a></p>
         </div>
     </div>
     <div class="common last">
         <div class="three">
-            <p class="leftP">{{ where[1] }}</p>
-            <p class="rightP">{{ howMuch[1] }}$</p>
+            <p *ngIf="loggedIn" class="leftP">{{ where[1] }}</p>
+            <p *ngIf="loggedIn" class="rightP">{{ howMuch[1] }}$</p>
+            <p *ngIf="!loggedIn" class="topP">Only registered users can see our prices</p>
+            <p *ngIf="!loggedIn" class="bottomP"><a routerLink="/register">Join now</a></p>
         </div>
     </div>
 </div>
+<div class="border"></div>

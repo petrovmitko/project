@@ -8,7 +8,9 @@ import { MainComponent } from './main/main.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { CardsComponent } from './cards/cards.component';
-
+import { MiddleComponent } from './middle/middle.component';
+import { CalendarComponent } from './calendar/calendar.component';
+import { CommonService } from './common.service'
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,13 +18,15 @@ import { CardsComponent } from './cards/cards.component';
     MainComponent,
     HeaderComponent,
     FooterComponent,
-    CardsComponent
+    CardsComponent,
+    MiddleComponent,
+    CalendarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [CommonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -57,6 +57,24 @@
     font-family: 'Sintony', sans-serif;
     color: white;
 }
+.topP{
+    font-size: 14px;
+    text-align: center;
+    font-family: 'Sintony', sans-serif;
+    color: white;
+}
+.bottomP, a{
+    font-size: 11px;
+    text-align: center;
+    font-family: 'Sintony', sans-serif;
+    color: white;
+    margin-top: -10px;
+    text-decoration: none;
+}
+a:hover{
+    color: #2E6178;
+    border: 1px solid #2E6178;
+}
 .checkBtn{
     width: 100px;
     height: 10px;
@@ -78,10 +96,12 @@
 .hotelOptions, .check-in, .check-out, .guests, .passangers{
     width: 240px;
     height: 30px;
-    margin-top: 20px;
+    margin-top: 6px;
     margin-left: 20px;
     background: greenyellow;
+    color:  #2E6178;
     font-family: 'Sintony', sans-serif;
+    outline: none;
 }
 .btnHotelCar{
     width: 50%;
@@ -107,6 +127,15 @@
 }
 .shown{
     display: block;
+}
+label{
+    margin: 0px;
+    padding: 0px;
+    margin-top: 14px;
+    margin-left: 60px;
+    font-size: 12px;
+    font-family: 'Dosis', sans-serif;
+    color:#2E6178;
 }
 @media only screen and (max-width: 900px) {
     .cards{

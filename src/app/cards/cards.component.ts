@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-
+import { CommonService } from '../common.service'
 @Component({
   selector: 'app-cards',
   templateUrl: './cards.component.html',
-  styleUrls: ['./cards.component.scss']
+  styleUrls: ['./cards.component.scss'],
+  providers: [CommonService]
 })
 export class CardsComponent implements OnInit {
   hotelORCar = false
@@ -12,8 +13,10 @@ export class CardsComponent implements OnInit {
   hotels = ['Hilton', 'Ramada', 'Ibis', 'Holliday-Inn', 'Metropolitan'];
   cars = ['Small city car - 4', 'SUV 5', 'Family car 5', 'Minivan 7']
   numbers = Array(8).fill(1).map((x, i) => x += i);
-  passangers = Array(4).fill(1).map((x, i) => x += i);
-  constructor() { }
+  passangers = Array(7).fill(1).map((x, i) => x += i);
+  carDefault = 'Choose a car'
+  toggle: boolean
+  constructor(private commonService: CommonService) { }
   ngOnInit() {
   }
   hotelCheck(){
@@ -22,7 +25,9 @@ export class CardsComponent implements OnInit {
   carCheck(){
     this.hotelORCar = false
   }
-
+  showCalendar(){
+    this.toggle = this.toggle === true ? false : true
+  }
 }
 
 
