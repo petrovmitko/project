@@ -4,7 +4,9 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class CommonService {
-  toggle: boolean = false;
-  constructor() { }
+  toggle: boolean
+  constructor() {
+    this.toggle = false
+   }
   
 }

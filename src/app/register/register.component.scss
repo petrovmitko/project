@@ -1,0 +1,108 @@
+.register-form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+.first-name, .last-name, .email, .password-reg, .rePassword-reg, .reg{
+    width: 300px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+}
+.reg{
+    background: #39CCCC;
+}
+.first-name{
+    background: greenyellow;
+}
+.last-name{
+    background: #ffd633;
+}
+.email{
+    background: #2E6178;
+}
+.rePassword-reg{
+    background: #3b3a30;
+}
+.password-reg{
+    background: #3D9970;
+}
+input{
+    height: 40%;
+    width: 70%;
+    margin-top: 16px;
+    padding: 8px;
+    outline: none;
+    text-align: center;
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+    font-size: 20px;
+    font-family: 'Sintony', sans-serif;
+    font-weight: bold;
+}
+input:focus{
+    text-align: left;
+    color: #2E6178;
+    background: whitesmoke;
+}
+input::placeholder{
+    color: white;
+}
+input:focus::placeholder{
+    color:transparent;
+}
+span{
+    width: 100%;
+    height: 100%;
+    font-size: 28px;
+    color: white;
+
+    font-family: 'Odibee Sans', cursive;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+span:hover{
+    background: whitesmoke;
+    color: #2E6178;
+}
+.arrow-down{
+    width: 0; 
+    height: 0; 
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+}
+.one{
+    border-top: 8px solid greenyellow;
+    position: absolute;
+    top: 70px;
+    left: 48%;
+  }
+.two{
+    border-top: 8px solid #ffd633;
+    position: absolute;
+    top: 140px;
+    left: 48%;
+}
+.three{
+    border-top: 8px solid #2E6178;
+    position: absolute;
+    top: 210px;
+    left: 48%;
+}
+.four{
+    border-top: 8px solid #3D9970;
+    position: absolute;
+    top: 280px;
+    left: 48%;
+}
+.five{
+    border-top: 8px solid #3b3a30;
+    position: absolute;
+    top: 350px;
+    left: 48%;
+}

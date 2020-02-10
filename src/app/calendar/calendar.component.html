@@ -1,6 +1,6 @@
 <div class="frame">
     <div class="year">
-        <div class="down" (click)="changeMonth(-1)">-</div>{{month}}   {{year}} <div class="up" (click)="changeMonth(1)">+</div></div>
+        <div class="down" (click)="changeMonth(-1)">-</div>{{month}} / {{year}} <div class="up" (click)="changeMonth(1)">+</div></div>
     <table>
         <tbody (click)="getClickedDate($event.target.innerText)">
             <tr>

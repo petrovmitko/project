@@ -86,14 +86,15 @@ img{
         display: block;
     }
     .right, .left{
-        display: block;
-        width: 100%;
+        display: inline-block;
     }
     .left{
         margin-top: 84px;
+        
     }
     .right{
-        margin-top: -14px;
+        margin-top: 84px;
+        margin-right: 10px;
     }
     .disp{
         display: none;

@@ -15,10 +15,8 @@ export class CalendarComponent implements OnInit {
   indexMonth = this.date.getMonth()
   allMonth = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November","December"]
   month = this.allMonth[this.indexMonth]
-  constructor(private commonService: CommonService) { }
-
-  ngOnInit() {
-  }
+  constructor(x: CommonService) { }
+  ngOnInit() {}
 
   changeMonth(x: number){
     if(x === 1){

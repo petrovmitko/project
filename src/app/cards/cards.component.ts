@@ -7,6 +7,7 @@ import { CommonService } from '../common.service'
   providers: [CommonService]
 })
 export class CardsComponent implements OnInit {
+  loggedIn = true
   hotelORCar = false
   where = ['Maldives', 'Cancun']; // Should be changed to most liked and will be pulled up from the base
   howMuch = [3325, 7200];

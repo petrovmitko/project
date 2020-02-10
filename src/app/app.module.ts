@@ -10,7 +10,9 @@ import { FooterComponent } from './footer/footer.component';
 import { CardsComponent } from './cards/cards.component';
 import { MiddleComponent } from './middle/middle.component';
 import { CalendarComponent } from './calendar/calendar.component';
-import { CommonService } from './common.service'
+import { CommonService } from './common.service';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,9 @@ import { CommonService } from './common.service'
     FooterComponent,
     CardsComponent,
     MiddleComponent,
-    CalendarComponent
+    CalendarComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

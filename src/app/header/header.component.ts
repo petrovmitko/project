@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   menuCheck: boolean
+  loggedIn = false
   constructor() { 
     this.menuCheck = false
   }
