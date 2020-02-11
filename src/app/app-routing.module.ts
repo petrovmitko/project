@@ -4,14 +4,17 @@ import { MainComponent } from './main/main.component'
 import { PnfComponent } from './pnf/pnf.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { AboutComponent } from './about/about.component';
+import { ContactsComponent } from './contacts/contacts.component'
 
-// const routes: Routes = [];
 const routes: Routes = [
 
   { path: 'main', component: MainComponent },
   { path: '', component: MainComponent},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
+  {path: 'about', component: AboutComponent},
+  {path: 'contacts', component: ContactsComponent},
   { path: '**', component: PnfComponent}
 
 ]

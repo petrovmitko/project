@@ -12,7 +12,9 @@ import { MiddleComponent } from './middle/middle.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { CommonService } from './common.service';
 import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component'
+import { RegisterComponent } from './register/register.component';
+import { AboutComponent } from './about/about.component';
+import { ContactsComponent } from './contacts/contacts.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +26,9 @@ import { RegisterComponent } from './register/register.component'
     MiddleComponent,
     CalendarComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    AboutComponent,
+    ContactsComponent
   ],
   imports: [
     BrowserModule,

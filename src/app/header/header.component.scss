@@ -100,10 +100,10 @@ img{
         display: none;
     }
     .right > li{
-        border: 1px solid black;
+        border: 1px solid #2E6178;
     }
     .left > li{
-        border: 1px solid black;
+        border: 1px solid #2E6178;
     }
     li{
         width: 60px;
@@ -114,10 +114,12 @@ img{
     }
     a{
         margin-top: 0px;
+        padding-top: 4px;
     }
     li > a{
         font-size: 12px;
-        color: black;
+        color: #2E6178;
+        
     }
     img{
         position: absolute;

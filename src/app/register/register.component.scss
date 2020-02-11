@@ -39,7 +39,7 @@ input{
     border: 1px solid white;
     background: transparent;
     color: white;
-    font-size: 20px;
+    font-size: 16px;
     font-family: 'Sintony', sans-serif;
     font-weight: bold;
 }
@@ -106,3 +106,29 @@ span:hover{
     top: 350px;
     left: 48%;
 }
+.pathToLogin{
+    margin-top: 10px;
+    font-family: 'Odibee Sans', cursive;
+    display: flex;
+  }
+  p{
+    font-size: 18px;
+    margin-top: 0px;
+    margin-left: 50px;
+    color: gray;
+  }
+  a{
+    color: black;
+    margin-left: 6px;
+  }
+  a:hover{
+      color: #2E6178;
+  }
+  h4{
+    position: absolute;
+    margin-top: -40px;
+    margin-left: 90px;  
+    font-family: 'Odibee Sans', cursive;
+    font-size: 28px; 
+    color: #2E6178; 
+  }
