@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../auth.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
   menuCheck: boolean
   loggedIn = false
-  constructor() { 
+  constructor(private authService: AuthService) { 
     this.menuCheck = false
   }
 
@@ -21,5 +22,8 @@ export class HeaderComponent implements OnInit {
     else{
       this.menuCheck = true
     }
+  }
+  logout(){
+    this.authService.logOut()
   }
 }

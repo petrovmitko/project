@@ -1,28 +1,30 @@
 <div class="register-form">
     <h4>Register Page</h4>
+    <form #f="ngForm" (ngSubmit)="register(f)">
     <div class="first-name">
-      <input type="text" placeholder="First Name"/>
+      <input type="text" name="firstName" ngModel placeholder="First Name"/>
     </div>
     <div class="last-name">
     <div class="arrow-down one"></div>
-      <input type="text" placeholder="Last Name"/>
+      <input type="text" name="lastName" ngModel placeholder="Last Name"/>
     </div>
     <div class="email">
         <div class="arrow-down two"></div>
-        <input type="text" placeholder="Email Address"/>
+        <input type="text" name="email" ngModel placeholder="Email Address *" required/>
       </div>
       <div class="password-reg">
       <div class="arrow-down three"></div>
-        <input type="text" placeholder="Password"/>
+        <input type="password" name="password" ngModel placeholder="Password *" required/>
       </div>
       <div class="rePassword-reg">
         <div class="arrow-down four"></div>
-          <input type="text" placeholder="Repeat Password"/>
+          <input type="password" name="rePassword" ngModel placeholder="Repeat Password"/>
         </div>
     <div class="reg">
     <div class="arrow-down five"></div>
-      <span>Sign Up</span>
+      <button type="submit" [disabled]="f.invalid">Sign Up</button>
     </div>
+  </form>
     <div class="pathToLogin">
       <p>Already have an account?</p>
       <a routerLink="/login">Click here!</a>

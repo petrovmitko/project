@@ -10,9 +10,9 @@
         <li><a routerLink="/contacts">Contacts</a></li>
     </ul>
     <ul class="right" [ngClass]="!menuCheck ? 'disp' : 'right'">
-        <li *ngIf="loggedIn"><a routerLink="/profil">Profil</a></li>
-        <li *ngIf="!loggedIn"><a routerLink="/login">Login</a></li>
-        <li *ngIf="!loggedIn"><a routerLink="/register">Register</a></li>
-        <li *ngIf="loggedIn"><a routerLink="/logout">Logout</a></li>
+        <li *ngIf="authService.isAut()"><a routerLink="/profil">Profil</a></li>
+        <li *ngIf="!authService.isAut()"><a routerLink="/login">Login</a></li>
+        <li *ngIf="!authService.isAut()"><a routerLink="/register">Register</a></li>
+        <li *ngIf="authService.isAut()" (click)="logout()"><a routerLink="/logout">Logout</a></li>
     </ul>
 </div>

@@ -38,18 +38,18 @@
     </div>
     <div class="common second">
         <div class="two">
-            <p *ngIf="loggedIn" class="leftP">{{ where[0] }}</p>
-            <p *ngIf="loggedIn" class="rightP">{{ howMuch[0] }}$</p>
-            <p *ngIf="!loggedIn" class="topP">Only registered user can see our prices</p>
-            <p *ngIf="!loggedIn" class="bottomP"><a routerLink="/register">Join now</a></p>
+            <p *ngIf="authService.isAut()" class="leftP">{{ where[0] }}</p>
+            <p *ngIf="authService.isAut()" class="rightP">{{ howMuch[0] }}$</p>
+            <p *ngIf="!authService.isAut()" class="topP">Only registered user can see our prices</p>
+            <p *ngIf="!authService.isAut()" class="bottomP"><a routerLink="/login">Join now</a></p>
         </div>
     </div>
     <div class="common last">
         <div class="three">
-            <p *ngIf="loggedIn" class="leftP">{{ where[1] }}</p>
-            <p *ngIf="loggedIn" class="rightP">{{ howMuch[1] }}$</p>
-            <p *ngIf="!loggedIn" class="topP">Only registered users can see our prices</p>
-            <p *ngIf="!loggedIn" class="bottomP"><a routerLink="/register">Join now</a></p>
+            <p *ngIf="authService.isAut()" class="leftP">{{ where[1] }}</p>
+            <p *ngIf="authService.isAut()" class="rightP">{{ howMuch[1] }}$</p>
+            <p *ngIf="!authService.isAut()" class="topP">Only registered users can see our prices</p> 
+            <p *ngIf="!authService.isAut()" class="bottomP"><a routerLink="/login">Join now</a></p>
         </div>
     </div>
 </div>

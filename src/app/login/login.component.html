@@ -1,18 +1,20 @@
 <div class="form">
+  <form #f="ngForm" (ngSubmit)="login(f)">
     <h4>Login Page</h4>
-    <div class="username">
-      <input type="text" placeholder="USERNAME"/>
+    <div class="email">
+      <input type="text" name="email" ngModel placeholder="E-MAIL"/>
     </div>
     <div class="password">
     <div class="arrow-downF"></div>
-      <input type="text" placeholder="PASSWORD"/>
+      <input type="password" name="password" ngModel placeholder="PASSWORD"/>
     </div>
     <div class="login">
     <div class="arrow-downS"></div>
-      <span>Log In</span>
+      <button type="submit" [disabled]="f.invalid">Log In</button>
     </div>
     <div class="pathToRegister">
       <p>No account?</p>
       <a routerLink="/register">Create one!</a>
     </div>
+  </form>
   </div>

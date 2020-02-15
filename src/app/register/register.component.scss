@@ -12,7 +12,7 @@
     justify-content: center;
 }
 .reg{
-    background: #39CCCC;
+    background: rgb(84, 179, 223);;
 }
 .first-name{
     background: greenyellow;
@@ -21,7 +21,7 @@
     background: #ffd633;
 }
 .email{
-    background: #2E6178;
+    background: rgb(84, 179, 223);
 }
 .rePassword-reg{
     background: #3b3a30;
@@ -54,21 +54,23 @@ input::placeholder{
 input:focus::placeholder{
     color:transparent;
 }
-span{
+button{
     width: 100%;
     height: 100%;
     font-size: 28px;
+    background: #2E6178;
     color: white;
-
     font-family: 'Odibee Sans', cursive;
-    cursor: pointer;
+    border: none;
+    outline: none;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-span:hover{
+button:hover{
     background: whitesmoke;
     color: #2E6178;
+    cursor: pointer;
 }
 .arrow-down{
     width: 0; 
@@ -89,7 +91,7 @@ span:hover{
     left: 48%;
 }
 .three{
-    border-top: 8px solid #2E6178;
+    border-top: 8px solid rgb(84, 179, 223);
     position: absolute;
     top: 210px;
     left: 48%;
@@ -116,6 +118,7 @@ span:hover{
     margin-top: 0px;
     margin-left: 50px;
     color: gray;
+    font-family: 'Odibee Sans', cursive;
   }
   a{
     color: black;
