@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonService } from '../common.service'
 import { AuthService } from '../auth.service'
+import { FireServiceService } from '../fire-service.service'
+import { IDest } from '../destination'
 
 @Component({
   selector: 'app-cards',
@@ -8,21 +10,24 @@ import { AuthService } from '../auth.service'
   styleUrls: ['./cards.component.scss']
 })
 export class CardsComponent implements OnInit {
-  loggedIn = true
   hotelORCar = false
-  where = ['Maldives', 'Cancun']; // Should be changed to most liked and will be pulled up from the base
-  howMuch = [3325, 7200];
   hotels = ['Hilton', 'Ramada', 'Ibis', 'Holliday-Inn', 'Metropolitan'];
-  arr = []
   cars = ['Small city car - 4', 'SUV 5', 'Family car 5', 'Minivan 7']
   numbers = Array(8).fill(1).map((x, i) => x += i);
   passangers = Array(7).fill(1).map((x, i) => x += i);
   carDefault = 'Choose a car'
   toggle: boolean
-  constructor(private commonService: CommonService, private authService: AuthService) { 
-
+  collection: IDest[]
+  constructor(private commonService: CommonService, private authService: AuthService, private fireServiceService: FireServiceService) { 
+    
   }
   ngOnInit() {
+    if(this.authService.isAut()){
+      this.fireServiceService.getDestination().subscribe(data => {
+        this.collection = data
+        this.collection = this.collection.sort((a, b) => b.likes - a.likes)
+      })
+    }
   }
   hotelCheck(){
     this.hotelORCar = true 
@@ -33,6 +38,16 @@ export class CardsComponent implements OnInit {
   showCalendar(){
     this.toggle = this.toggle === true ? false : true
   }
+  getUrlS(){
+    if(this.authService.isAut()){
+      return `url(${this.collection[0].imageURL})`
+    }
+    return `url(/assets/img/maldives.jpg)`
+  }
+  getUrlT(){
+    if(this.authService.isAut()){
+      return `url(${this.collection[1].imageURL})`
+    }
+    return `url(/assets/img/cancun.jpg)`
+  }
 }
-
-

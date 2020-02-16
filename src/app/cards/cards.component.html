@@ -34,20 +34,20 @@
                 </select>
             </form>
         </div>
-        <div class="one"><a class="checkBtn" href="#">CHECK NOW</a></div>
+        <div class="one"><a class="checkBtn">CHECK NOW</a></div>
     </div>
-    <div class="common second">
+    <div class="common second" [ngStyle]="{'backgroundImage': getUrlS() }">
         <div class="two">
-            <p *ngIf="authService.isAut()" class="leftP">{{ where[0] }}</p>
-            <p *ngIf="authService.isAut()" class="rightP">{{ howMuch[0] }}$</p>
+            <p *ngIf="authService.isAut()" class="leftP">{{ collection[0].name }}</p>
+            <p *ngIf="authService.isAut()" class="rightP">{{ collection[0].price }}$</p>
             <p *ngIf="!authService.isAut()" class="topP">Only registered user can see our prices</p>
             <p *ngIf="!authService.isAut()" class="bottomP"><a routerLink="/login">Join now</a></p>
         </div>
     </div>
-    <div class="common last">
+    <div class="common last" [ngStyle]="{'backgroundImage': getUrlT()}">
         <div class="three">
-            <p *ngIf="authService.isAut()" class="leftP">{{ where[1] }}</p>
-            <p *ngIf="authService.isAut()" class="rightP">{{ howMuch[1] }}$</p>
+            <p *ngIf="authService.isAut()" class="leftP">{{ collection[1].name }}</p>
+            <p *ngIf="authService.isAut()" class="rightP">{{ collection[1].price }}$</p>
             <p *ngIf="!authService.isAut()" class="topP">Only registered users can see our prices</p> 
             <p *ngIf="!authService.isAut()" class="bottomP"><a routerLink="/login">Join now</a></p>
         </div>

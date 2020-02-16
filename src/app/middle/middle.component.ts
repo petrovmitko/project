@@ -6,10 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./middle.component.scss']
 })
 export class MiddleComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit() {
   }
-
 }

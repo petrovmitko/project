@@ -15,7 +15,7 @@ export class CalendarComponent implements OnInit {
   indexMonth = this.date.getMonth()
   allMonth = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November","December"]
   month = this.allMonth[this.indexMonth]
-  constructor(x: CommonService) { }
+  constructor(private x: CommonService) { }
   ngOnInit() {}
 
   changeMonth(x: number){
@@ -37,9 +37,7 @@ export class CalendarComponent implements OnInit {
     }
     this.month = this.allMonth[this.indexMonth]
   }
-  // showCalendar(){
-  //   this.toggle = this.toggle === true ? false : true
-  // }
+  
   getClickedDate(f: string){
     this.day = `${f}/${this.allMonth.indexOf(this.month) + 1}/${this.year}`
   }

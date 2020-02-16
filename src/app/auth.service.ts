@@ -41,8 +41,9 @@ export class AuthService {
   }
   getToken(){
     firebase.auth().currentUser.getIdToken()
-    .then((x) => {this.token = x })
-    .then(() => { return this.token })
+    .then((res) => this.token = res)
+    .then((x) => { return x })
+    .catch((err) => console.error(err))
   }
 
   isAut(){
