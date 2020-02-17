@@ -9,7 +9,6 @@ export class FireServiceService{
   collection: AngularFirestoreCollection<IDest>
   destCollection: Observable<IDest[]>
   constructor(public afs: AngularFirestore) {
-    // this.userCollection = this.afs.collection('users').valueChanges()
     this.destCollection = this.afs.collection('destinations').valueChanges()
    }
    getDestination(){

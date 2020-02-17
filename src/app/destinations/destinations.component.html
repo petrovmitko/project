@@ -1,0 +1,7 @@
+<div class="dest-div">
+    <div class="middlebox" *ngFor="let item of data">
+        <div class="box-img" [ngStyle]="{'backgroundImage': 'url(' + this.item.imageURL + ')'}"></div>
+        <div class="box-txt"><p>{{item.description}}</p></div>
+        <div class="box-data"></div>
+    </div>
+</div>
