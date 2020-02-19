@@ -2,11 +2,13 @@
   <form #f="ngForm" (ngSubmit)="login(f)">
     <h4>Login Page</h4>
     <div class="email">
-      <input type="text" name="email" ngModel placeholder="E-MAIL"/>
+      <input #emailInput="ngModel" type="text" name="email" ngModel placeholder="E-MAIL" [pattern]="regexPatt" required/>
+      <p *ngIf="emailInput?.errors?.pattern" class="error">Wrong email format !</p>
     </div>
     <div class="password">
     <div class="arrow-downF"></div>
-      <input type="password" name="password" ngModel placeholder="PASSWORD"/>
+      <input #passInput="ngModel" type="password" name="password" ngModel placeholder="PASSWORD" minlength="6" required/>
+      <p *ngIf="passInput?.errors?.minlength" class="error passError">Password should be at least 6 characters long !</p>
     </div>
     <div class="login">
     <div class="arrow-downS"></div>

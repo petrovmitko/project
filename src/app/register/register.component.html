@@ -10,12 +10,14 @@
     </div>
     <div class="email">
         <div class="arrow-down two"></div>
-        <input type="text" name="email" ngModel placeholder="Email Address *" required/>
+        <input #emailInput="ngModel" type="text" name="email" ngModel placeholder="Email Address *" [pattern]="emailRegExp" required/>
+        <p *ngIf="emailInput?.errors?.pattern" class="error">Wrong email format !</p>
       </div>
       <div class="password-reg">
       <div class="arrow-down three"></div>
-        <input type="password" name="password" ngModel placeholder="Password *" required/>
+        <input #passInput="ngModel" type="password" name="password" ngModel placeholder="Password *" minlength="6" required/>
       </div>
+      <p *ngIf="passInput?.errors?.minlength" class="error passError">Password should be at least 6 characters long !</p>
       <div class="rePassword-reg">
         <div class="arrow-down four"></div>
           <input type="password" name="rePassword" ngModel placeholder="Repeat Password"/>

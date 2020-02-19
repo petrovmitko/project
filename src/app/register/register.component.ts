@@ -8,7 +8,7 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
-
+  emailRegExp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
   constructor(private authService: AuthService) { }
 
   ngOnInit() {

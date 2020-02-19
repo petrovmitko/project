@@ -2,6 +2,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    margin-top: 80px;
     margin-right: -50%;
     transform: translate(-50%, -50%);
 }
@@ -10,6 +11,17 @@
     height: 70px;
     display: flex;
     justify-content: center;
+}
+.error{
+    position: absolute;
+    margin-top: 320px;
+    margin-left: -20px;
+    color: rgb(255, 72, 16);
+    letter-spacing: 0.5px;
+}
+.passError{
+    margin-top: 210px;
+    margin-left: 15px;
 }
 .reg{
     background: rgb(84, 179, 223);;

@@ -22,6 +22,7 @@ import { FormsModule } from '@angular/forms'
 import { HttpClientModule } from '@angular/common/http'
 import { environment } from '../environments/environment';
 import { DestinationsComponent } from './destinations/destinations.component';
+import { LogoSmallComponent } from './logo-small/logo-small.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { DestinationsComponent } from './destinations/destinations.component';
     RegisterComponent,
     AboutComponent,
     ContactsComponent,
-    DestinationsComponent
+    DestinationsComponent,
+    LogoSmallComponent
   ],
   imports: [
     BrowserModule,

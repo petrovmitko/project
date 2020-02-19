@@ -21,9 +21,6 @@
     align-items: center;
     justify-content: center;
 }
-h2{
-    display: none;
-}
 p{
     font-size: 30px;
     font-family: 'Sintony', sans-serif;
@@ -37,20 +34,5 @@ p{
     }
     .companyName{
         display: none;
-    }
-    h2{
-        display: block;
-        width: 120px;
-        height: auto;
-        border: 6px solid #FF5733;
-        color: #FF5733;
-        padding: 3px;
-        position: absolute;
-        top: 20px;
-        right: 30px;
-        z-index: 12;
-        font-size: 14px;
-        text-align: center;
-        font-family: 'Sintony', sans-serif;
     }
 }

@@ -13,12 +13,25 @@
 }
 .email{
     background: greenyellow;
+    
 }
 .password{
     background: #ffd633;
 }
 .login{
     background: #2E6178;
+}
+.error{
+    position: absolute;
+    margin-top: 260px;
+    margin-left: -10px;
+    color: rgb(255, 72, 16);
+    letter-spacing: 0.5px;
+    font-family: 'Odibee Sans', cursive;
+}
+.passError{
+    margin-top: 230px;
+    margin-left: 5px;
 }
 input{
     height: 40%;
