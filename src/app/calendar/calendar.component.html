@@ -40,9 +40,9 @@
                 <td>28</td>
             </tr>
             <tr>
-                <td>29</td>
-                <td>30</td>
-                <td>31</td>
+                <td *ngIf="checkLeap()">29</td>
+                <td *ngIf="checkThirty()">30</td>
+                <td *ngIf="checkThirtyOne()">31</td>
             </tr>
         </tbody>
     </table>

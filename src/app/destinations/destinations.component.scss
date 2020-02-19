@@ -31,14 +31,57 @@
     position: absolute;
     top: 0px;
     left: 180px;
+    font-size: 14px;
 }
 .box-data{
     width: 270px;
     height: 50px;
-    background: rebeccapurple;
+    background: #2E6178;
     position: absolute;
     top: 200px;
     left: 180px;
+}
+.like{
+    width: 50px;
+    height: 100%;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-right: 1px solid white;
+    color: white;
+    font-family: 'Odibee Sans', cursive;
+}
+.travel{
+    position: absolute;
+    top: 0px;
+    left: 51px;
+    width: 170px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 1px;
+    border: none;
+    border-right: 1px solid white;
+    color: white;
+    font-family: 'Odibee Sans', cursive;
+}
+.comment{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.like:hover, .travel:hover, .comment:hover{
+    color: rgb(16, 170, 241);
+    cursor: pointer;
 } 
 p{
     margin: 10px;

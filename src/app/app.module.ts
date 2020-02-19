@@ -21,9 +21,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth'
 import { FormsModule } from '@angular/forms'
 import { HttpClientModule } from '@angular/common/http'
 import { environment } from '../environments/environment';
-import { DestinationsComponent } from './destinations/destinations.component'
-// import { TokenInterceptor } from './interseptors/token.interseptor';
-// HTTP_INTERCEPTORS
+import { DestinationsComponent } from './destinations/destinations.component';
 
 
 @NgModule({

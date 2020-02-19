@@ -40,7 +40,9 @@ td:hover{
     width: 40px;
     height: 60px;
     font-size: 20px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-weight: bold;
     background: white;
     color: black;
@@ -55,7 +57,9 @@ td:hover{
     height: 60px;
     font-size: 22px;
     font-weight: bold;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: white;
     color: black;
     border: none;

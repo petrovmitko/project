@@ -18,7 +18,9 @@ export class CardsComponent implements OnInit {
   carDefault = 'Choose a car'
   toggle: boolean
   collection: IDest[]
-  constructor(private commonService: CommonService, private authService: AuthService, private fireServiceService: FireServiceService) { 
+  constructor(private commonService: CommonService, 
+              private authService: AuthService, 
+              private fireServiceService: FireServiceService) { 
     
   }
   ngOnInit() {
@@ -38,6 +40,7 @@ export class CardsComponent implements OnInit {
   showCalendar(){
     this.toggle = this.toggle === true ? false : true
   }
+
   getUrlS(){
     if(this.authService.isAut()){
       return `url(${this.collection[0].imageURL})`
