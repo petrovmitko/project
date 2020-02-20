@@ -11,21 +11,22 @@ import { HttpClientModule } from '@angular/common/http'
 })
 export class DestinationsComponent implements OnInit {
   data: IDest[]
-  
+  dataR: any
   constructor(private authService: AuthService, 
               private fireServiceService: FireServiceService,
-              private http: HttpClientModule) { }
+              private http: HttpClientModule
+              ) { }
 
   ngOnInit() {
     if(this.authService.isAut()){
       this.fireServiceService.getDestination().subscribe(res => {
         this.data = res
-        console.log(res);
       })
     }
   }
 
   addLike(){
-  
   }
+
+  
 }

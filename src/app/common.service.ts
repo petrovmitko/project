@@ -10,14 +10,24 @@ const baseUrl = 'https://travel-agency-48209.firebaseio.com/destinations/'
 })
 export class CommonService {
   toggle: boolean
-  date: string 
+  dayHCI: string  
+  dayHCO: string 
+  dayRCI: string 
+  dayRCO: string 
+  r: string
   constructor(private http: HttpClient, private authService: AuthService) { }
   
   changeToggle(){
-   return this.toggle = this.toggle === true ? false : true
+   this.toggle = true
   }
   toggleFalse(){
-    return this.toggle = false
+    this.toggle = false
+  }
+  getVal(x: string){
+      this.r = x
+    }
+  sendVal(){
+    return this.r
   }
 }
 

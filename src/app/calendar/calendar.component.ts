@@ -8,7 +8,6 @@ import { CommonService } from '../common.service';
 })
 export class CalendarComponent implements OnInit {
   date: Date = new Date();
-  day: string  
   year = this.date.toString().split(' ')[3]
   indexMonth = this.date.getMonth()
   allMonth = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November","December"]
@@ -35,11 +34,22 @@ export class CalendarComponent implements OnInit {
     }
     this.month = this.allMonth[this.indexMonth]
   }
-  
   getClickedDate(f: string){
-    this.day = `${f}/${this.allMonth.indexOf(this.month) + 1}/${this.year}`
+    let d = `${f}/${this.allMonth.indexOf(this.month) + 1}/${this.year}`
     this.commonService.toggleFalse()
-    return this.day
+    let val = this.commonService.sendVal()
+    if(val === 'HCI'){
+      this.commonService.dayHCI = d
+    }
+    else if(val === 'HCO'){
+      this.commonService.dayHCO = d
+    }
+    else if(val === 'RCI'){
+      this.commonService.dayRCI = d
+    }
+    else if(val === 'RCO'){
+      this.commonService.dayRCO = d
+    }
   }
 
   checkThirtyOne(){

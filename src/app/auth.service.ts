@@ -44,7 +44,6 @@ export class AuthService {
     .then((x) => { return x })
     .catch((err) => console.error(err))
   }
-
   isAut(){
     return this.token != null ? true : false
   }

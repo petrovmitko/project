@@ -36,9 +36,6 @@ export class CardsComponent implements OnInit {
   carCheck(){
     this.hotelORCar = false
   }
-  showCalendar(){
-    this.commonService.changeToggle()
-  }
   getUrlS(){
     if(this.authService.isAut()){
       return `url(${this.collection[0].imageURL})`
