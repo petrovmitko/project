@@ -1,11 +1,13 @@
-<div class="dest-div">
-    <div class="middlebox" *ngFor="let item of data">
-        <div class="box-img" [ngStyle]="{'backgroundImage': 'url(' + this.item.imageURL + ')'}"></div>
-        <div class="box-txt"><p>{{item.description}}</p></div>
-        <div class="box-data">
-            <div class="like" (click)="addLike()"><i class="far fa-heart"></i></div>
-            <div class="travel">TRAVEL</div>
-            <div class="comment"><i class="far fa-comment"></i></div>
+<div class="dest-div" >
+    <div class="box" *ngFor="let item of data">
+        <div class="middlebox" [ngClass]="this.item.id">
+            <div class="box-img" [ngStyle]="{'backgroundImage': 'url(' + this.item.imageURL + ')'}"></div>
+            <div class="box-txt"><p>{{item.description}}</p></div>
+            <div class="box-data">
+                <div class="like" (click)="addLike()"><i class="far fa-heart"></i></div>
+                <div class="travel">Visit {{this.item.name}}</div>
+                <div class="comment"><i class="far fa-comment"></i></div>
+            </div>
         </div>
     </div>
 </div>

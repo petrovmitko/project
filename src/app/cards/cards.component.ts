@@ -16,7 +16,6 @@ export class CardsComponent implements OnInit {
   numbers = Array(8).fill(1).map((x, i) => x += i);
   passangers = Array(7).fill(1).map((x, i) => x += i);
   carDefault = 'Choose a car'
-  toggle: boolean
   collection: IDest[]
   constructor(private commonService: CommonService, 
               private authService: AuthService, 
@@ -38,9 +37,8 @@ export class CardsComponent implements OnInit {
     this.hotelORCar = false
   }
   showCalendar(){
-    this.toggle = this.toggle === true ? false : true
+    this.commonService.changeToggle()
   }
-
   getUrlS(){
     if(this.authService.isAut()){
       return `url(${this.collection[0].imageURL})`

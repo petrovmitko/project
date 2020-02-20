@@ -8,7 +8,7 @@
                 <select class="hotelOptions" name="hotel">
                     <option *ngFor="let hotel of hotels" [value]="hotel" >{{ hotel | uppercase}}</option>
                 </select>
-                <app-calendar [ngClass]="!toggle ? 'hidden' : 'shown'"></app-calendar>
+                <app-calendar [ngClass]="!commonService.toggle ? 'hidden' : 'shown'"></app-calendar>
                 <label>Check-in date</label>
                 <div class="check-in" (click)="showCalendar()"></div>
                 <label>Check-out date</label>
@@ -23,7 +23,7 @@
                 <select class="hotelOptions" name="car">
                     <option *ngFor="let car of cars" [value]="car" >{{ car }} persons</option>
                 </select>
-                <app-calendar [ngClass]="!toggle ? 'hidden' : 'shown'"></app-calendar>
+                <app-calendar [ngClass]="!commonService.toggle ? 'hidden' : 'shown'"></app-calendar>
                 <label>Check-in date</label>
                 <div class="check-in" (click)="showCalendar()"></div>
                 <label>Check-out date</label>

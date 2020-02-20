@@ -4,18 +4,16 @@ import { CommonService } from '../common.service';
 @Component({
   selector: 'app-calendar',
   templateUrl: './calendar.component.html',
-  styleUrls: ['./calendar.component.scss'],
-  providers: [ CommonService ]
+  styleUrls: ['./calendar.component.scss']
 })
 export class CalendarComponent implements OnInit {
-  // toggle: boolean = true
   date: Date = new Date();
   day: string  
   year = this.date.toString().split(' ')[3]
   indexMonth = this.date.getMonth()
   allMonth = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November","December"]
   month = this.allMonth[this.indexMonth]
-  constructor(private x: CommonService) { }
+  constructor(private commonService: CommonService) { }
   ngOnInit() {}
 
   changeMonth(x: number){
@@ -40,8 +38,10 @@ export class CalendarComponent implements OnInit {
   
   getClickedDate(f: string){
     this.day = `${f}/${this.allMonth.indexOf(this.month) + 1}/${this.year}`
+    this.commonService.toggleFalse()
     return this.day
   }
+
   checkThirtyOne(){
     if(this.indexMonth === 0 || this.indexMonth === 2 || this.indexMonth === 4 || this.indexMonth === 6 ||this.indexMonth === 7 || this.indexMonth === 9 || this.indexMonth === 11){
       return true

@@ -9,7 +9,15 @@ const baseUrl = 'https://travel-agency-48209.firebaseio.com/destinations/'
   providedIn: 'root'
 })
 export class CommonService {
+  toggle: boolean
+  date: string 
   constructor(private http: HttpClient, private authService: AuthService) { }
   
+  changeToggle(){
+   return this.toggle = this.toggle === true ? false : true
+  }
+  toggleFalse(){
+    return this.toggle = false
+  }
 }
 
