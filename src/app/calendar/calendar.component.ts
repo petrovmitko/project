@@ -35,7 +35,7 @@ export class CalendarComponent implements OnInit {
     this.month = this.allMonth[this.indexMonth]
   }
   getClickedDate(f: string){
-    let d = `${f}/${this.allMonth.indexOf(this.month) + 1}/${this.year}`
+    let d = `${f} / ${this.allMonth.indexOf(this.month) + 1} / ${this.year}`
     this.commonService.toggleFalse()
     let val = this.commonService.sendVal()
     if(val === 'HCI'){

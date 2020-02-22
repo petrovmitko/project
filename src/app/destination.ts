@@ -1,5 +1,4 @@
 export interface IDest{
-    id?: string 
     comments?: string[]
     description?: string
     name?: string

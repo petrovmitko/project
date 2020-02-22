@@ -25,6 +25,11 @@ import { DestinationsComponent } from './destinations/destinations.component';
 import { LogoSmallComponent } from './logo-small/logo-small.component';
 
 
+// new
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,7 +54,8 @@ import { LogoSmallComponent } from './logo-small/logo-small.component';
     AngularFirestoreModule,
     AngularFireAuthModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireDatabaseModule // new
   ],
   providers: [FireServiceService, CommonService],
   bootstrap: [AppComponent]

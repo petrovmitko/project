@@ -10,9 +10,9 @@
                 </select>
                 <app-calendar [ngClass]="!commonService.toggle ? 'hidden' : 'shown'"></app-calendar>
                 <label>Check-in date</label>
-                <div class="check-in" (click)="commonService.changeToggle()" (click)="commonService.getVal('HCI')"><p>{{ this.commonService.dayHCI }}</p></div>
+                <div class="check-in" (click)="commonService.changeToggle()" (click)="commonService.getVal('HCI')"><p class="dateForm">{{ this.commonService.dayHCI }}</p></div>
                 <label>Check-out date</label>
-                <div class="check-out" (click)="commonService.changeToggle()" (click)="commonService.getVal('HCO')"><p>{{ this.commonService.dayHCO }}</p></div>
+                <div class="check-out" (click)="commonService.changeToggle()" (click)="commonService.getVal('HCO')"><p class="dateForm">{{ this.commonService.dayHCO }}</p></div>
                 <label for="guests">Gests</label>
                 <select name="guests" class="guests">
                 <option *ngFor="let i of numbers" [value]="Guests">{{ i }}</option>
@@ -25,9 +25,9 @@
                 </select>
                 <app-calendar [ngClass]="!commonService.toggle ? 'hidden' : 'shown'"></app-calendar>
                 <label>Check-in date</label>
-                <div class="check-in" (click)="commonService.changeToggle()" (click)="commonService.getVal('RCI')"><p>{{ this.commonService.dayRCI }}</p></div>
+                <div class="check-in" (click)="commonService.changeToggle()" (click)="commonService.getVal('RCI')"><p class="dateForm">{{ this.commonService.dayRCI }}</p></div>
                 <label>Check-out date</label>
-                <div class="check-out" (click)="commonService.changeToggle()" (click)="commonService.getVal('RCO')"><p>{{ this.commonService.dayRCO }}</p></div>
+                <div class="check-out" (click)="commonService.changeToggle()" (click)="commonService.getVal('RCO')"><p class="dateForm">{{ this.commonService.dayRCO }}</p></div>
                 <label for="passangers">Passengers</label>
                 <select name="passangers" class="passangers">
                 <option *ngFor="let pa of passangers">{{ pa }}</option>
