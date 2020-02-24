@@ -1,0 +1,14 @@
+<div class="boxDetails">
+    <div class="commonBox">
+        <div class="divimg" [ngStyle]="{'backgroundImage': 'url(' + dataById.imageURL + ')'}"></div>
+        <div class="description">{{ dataById.description }} <h6>{{ dataById.likes }} people like {{ dataById.name }}</h6></div>
+    </div>
+    <div class="name">{{ dataById.name | uppercase}}</div>
+    <div class="price">{{ dataById.price }} $</div>
+</div> 
+<div class="galery" >
+    <div *ngFor="let ar of arr" class="galImg">
+        <img [src]="ar" alt="image">
+    </div>
+</div>
+   

@@ -1,22 +1,20 @@
 import { Injectable } from '@angular/core';
 import {  AngularFirestore } from 'angularfire2/firestore'
-import { Observable } from 'rxjs';
-import { IDest } from './destination'
+
 @Injectable({
   providedIn: 'root'
 })
 
 export class FireServiceService{
-  // collection: AngularFirestoreCollection<IDest>
-  destCollection: Observable<IDest[]>
-
+  destCollection: any
+  fireId: string
   constructor(private afs: AngularFirestore) {
-    this.destCollection = this.afs.collection('destinations').valueChanges()
+    this.destCollection = this.afs.collection('destinations').valueChanges({ idField: 'id' })
    }
    getDestination(){
-     return this.destCollection
+     return this.destCollection    
    }
-
+   setFireId(d: string){
+     this.fireId = d
+   }
 }
-
-export interface DestId extends IDest { id: string; }

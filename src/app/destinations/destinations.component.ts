@@ -3,6 +3,8 @@ import { AuthService } from '../auth.service'
 import { FireServiceService } from '../fire-service.service'
 import { IDest } from '../destination'
 import { HttpClientModule } from '@angular/common/http'
+import { CommonService } from '../common.service';
+
 
 @Component({
   selector: 'app-destinations',
@@ -11,10 +13,10 @@ import { HttpClientModule } from '@angular/common/http'
 })
 export class DestinationsComponent implements OnInit {
   data: IDest[]
-  dataR: any
   constructor(private authService: AuthService, 
               private fireServiceService: FireServiceService,
-              private http: HttpClientModule
+              private http: HttpClientModule,
+              private commonService: CommonService
               ) { }
 
   ngOnInit() {
@@ -24,9 +26,9 @@ export class DestinationsComponent implements OnInit {
       })
     }
   }
-
-  addLike(){
+  getDetails(x: string){
+    let ind = this.data.findIndex(f => f.id === x)
+    return this.data[ind]
   }
-
-  
+    
 }

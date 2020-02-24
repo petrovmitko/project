@@ -23,10 +23,11 @@ import { HttpClientModule } from '@angular/common/http'
 import { environment } from '../environments/environment';
 import { DestinationsComponent } from './destinations/destinations.component';
 import { LogoSmallComponent } from './logo-small/logo-small.component';
-
+import { RouterModule } from '@angular/router'
 
 // new
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { DetailsComponent } from './details/details.component';
 
 
 
@@ -45,7 +46,8 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
     AboutComponent,
     ContactsComponent,
     DestinationsComponent,
-    LogoSmallComponent
+    LogoSmallComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -55,6 +57,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
     AngularFireAuthModule,
     FormsModule,
     HttpClientModule,
+    RouterModule.forRoot([]),
     AngularFireDatabaseModule // new
   ],
   providers: [FireServiceService, CommonService],

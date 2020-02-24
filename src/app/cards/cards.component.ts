@@ -14,10 +14,11 @@ export class CardsComponent implements OnInit {
   hotelORCar = false
   hotels = ['Hilton', 'Ramada', 'Ibis', 'Holliday-Inn', 'Metropolitan'];
   cars = ['Small city car - 4', 'SUV 5', 'Family car 5', 'Minivan 7']
-  numbers = Array(8).fill(1).map((x, i) => x += i);
-  passangers = Array(7).fill(1).map((x, i) => x += i);
+  numbers = Array(8).fill(1).map((x: number, i) => x += i);
+  passangers = Array(7).fill(1).map((y: number, i) => y += i);
   carDefault = 'Choose a car'
   collection: IDest[]
+  idDest: any
   constructor(private commonService: CommonService, 
               private authService: AuthService, 
               private fireServiceService: FireServiceService) { 
