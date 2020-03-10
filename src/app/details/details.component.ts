@@ -9,6 +9,7 @@ import { FireServiceService } from '../fire-service.service'
 export class DetailsComponent implements OnInit {
   dataById: any
   arr: string[]
+  comments: string[]
   constructor(private authService: AuthService, private fss: FireServiceService) { }
 
   ngOnInit() {
@@ -17,6 +18,7 @@ export class DetailsComponent implements OnInit {
         let i = res.findIndex(x => x.id === this.fss.fireId)
         this.dataById = res[i]
         this.arr = this.dataById.imgArr
+        this.comments = this.dataById.comments
       })
     }
   }

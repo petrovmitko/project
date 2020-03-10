@@ -4,7 +4,7 @@
             <div class="box-img" [ngStyle]="{'backgroundImage': 'url(' + this.item.imageURL + ')'}"></div>
             <div class="box-txt"><p>{{item.description}}</p></div>
             <div class="box-data">
-                <div class="like" (click)="addLike()"><i class="far fa-heart"></i></div>
+                <div class="like" (click)="addLike(item.id)"><i class="far fa-heart"></i></div>
                 <div class="travel" (click)="fireServiceService.setFireId(item.id)" routerLink="/details/{{item.id}}">Visit {{this.item.name}}</div>
                 <div class="comment"><i class="far fa-comment"></i></div>
             </div>

@@ -1,7 +1,7 @@
 <div class="boxDetails">
     <div class="commonBox">
         <div class="divimg" [ngStyle]="{'backgroundImage': 'url(' + dataById.imageURL + ')'}"></div>
-        <div class="description">{{ dataById.description }} <h6>{{ dataById.likes }} people like {{ dataById.name }}</h6></div>
+        <div class="description">{{ dataById.description }} <h6>{{ dataById.likes }} people liked {{ dataById.name }}</h6></div>
     </div>
     <div class="name">{{ dataById.name | uppercase}}</div>
     <div class="price">{{ dataById.price }} $</div>
@@ -11,4 +11,13 @@
         <img [src]="ar" alt="image">
     </div>
 </div>
-   
+
+<div class="comment-section" *ngIf="comments">
+    <p class="comm-lable">Comments</p>
+    <ul>
+        <li *ngFor="let comm of comments">
+            <div class="owner">Mitko</div>
+            <p class="comm-text">{{ comm }}</p>
+        </li>
+    </ul>
+</div>

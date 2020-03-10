@@ -30,6 +30,12 @@ export class CommonService {
   sendVal(){
     return this.r
   }
+  clrValue(){
+    this.dayHCI = ''
+    this.dayHCO = '' 
+    this.dayRCI = ''
+    this.dayRCO = ''
+  }
   // getById(x : string){
   //   return this.http.get(`${baseUrl}${x}.json`);
   // }

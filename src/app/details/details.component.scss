@@ -84,6 +84,48 @@ img{
     max-width: 100%;
     overflow: hidden;
 }
+.comment-section{
+    height: auto;
+    width: 100%;
+    position: absolute;
+    top: 1300px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+.comm-lable{
+    text-align: center;
+    font-family: 'Sintony', sans-serif;
+    font-weight: 600;
+    color: #2E6178;
+}
+ul{
+    width: 80%;
+    list-style: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+}
+li{
+    border: 1px solid white;
+    padding: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.owner{
+    font-size: 24px;
+    color: white;
+    font-family: 'Odibee Sans', cursive;
+}
+.comm-text{
+    font-family: 'Sintony', sans-serif;
+    font-weight: 600;
+    color: #2E6178;
+}
 @media only screen and (max-width: 900px) {
     .commonBox{
         margin-top: 200px;
@@ -120,5 +162,9 @@ img{
     .galery{
         margin-top: 670px;
         grid-template-columns: repeat(1, 1fr);
+    }
+    .comment-section{
+        position: absolute;
+        top: 2200px;
     }
 }   
