@@ -28,6 +28,8 @@ import { RouterModule } from '@angular/router'
 // new
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { DetailsComponent } from './details/details.component';
+import { SplitPipePipe } from './split-pipe.pipe';
+import { CommentPipePipe } from './comment-pipe.pipe';
 
 
 
@@ -47,7 +49,9 @@ import { DetailsComponent } from './details/details.component';
     ContactsComponent,
     DestinationsComponent,
     LogoSmallComponent,
-    DetailsComponent
+    DetailsComponent,
+    SplitPipePipe,
+    CommentPipePipe
   ],
   imports: [
     BrowserModule,

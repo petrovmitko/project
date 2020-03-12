@@ -4,6 +4,7 @@ import { FireServiceService } from '../fire-service.service'
 import { IDest } from '../destination'
 import { CommonService } from '../common.service';
 import { AngularFirestore } from '@angular/fire/firestore'
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-destinations',
@@ -12,6 +13,8 @@ import { AngularFirestore } from '@angular/fire/firestore'
 })
 export class DestinationsComponent implements OnInit {
   data: IDest[]
+  currentDestId: string
+  commToggle: boolean = false
   constructor(private authService: AuthService, 
               private fireServiceService: FireServiceService,
               private commonService: CommonService,
@@ -38,7 +41,30 @@ export class DestinationsComponent implements OnInit {
         return this.afs.doc(`destinations/${iTid}`).update({likes: likes})
       })
     })
+  }
+  toggleCommentOpen(itemId){
+    this.commToggle = true
+    this.currentDestId = itemId
+  }
+  toggleCommentClose(){
+    this.commToggle =  false
+  }
+  sendComment(form: NgForm){
+    const name = form.value.name
+    const commentText = form.value.commentText
 
+    let index = this.data.findIndex(f => f.id === this.currentDestId)
+    let collection = this.data[index]
+    let comments = collection.comments
+    let c = `${name}<<>${commentText}`
+    comments.push(c)
+    this.afs.collection('destinations').get().forEach((item) => {
+      return item.docs.map(m => {
+        return this.afs.doc(`destinations/${this.currentDestId}`).update({comments: comments})
+      })
+    })
+
+    this.commToggle =  false
   }
     
 }

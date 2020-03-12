@@ -6,8 +6,16 @@
             <div class="box-data">
                 <div class="like" (click)="addLike(item.id)"><i class="far fa-heart"></i></div>
                 <div class="travel" (click)="fireServiceService.setFireId(item.id)" routerLink="/details/{{item.id}}">Visit {{this.item.name}}</div>
-                <div class="comment"><i class="far fa-comment"></i></div>
+                <div class="comment" (click)="toggleCommentOpen(item.id)"><i class="far fa-comment"></i></div>
             </div>
         </div>
     </div>
+</div>
+<div class="comment-form" [ngClass]="!commToggle ? 'hide' : 'show'">
+    <form #comForm="ngForm" (ngSubmit)="sendComment(comForm)" class="form-comm">
+        <input #nameInput="ngModel" type="text" name="name" ngModel placeholder="Your Name" required/>
+        <textarea #commentInput="ngModel" rows="4" cols="26" ngModel name="commentText" required></textarea>
+        <button type="submit" class="lv-comm">Leave your comment</button>
+    </form>
+    <div class="close-btn" (click)="toggleCommentClose()">X</div>
 </div>

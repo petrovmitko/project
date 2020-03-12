@@ -88,6 +88,97 @@ p{
     font-family: 'Sintony', sans-serif;
     color: #2E6178;
 }
+.comment-form{
+    width: 400px;
+    height: 250px;
+    background: transparent;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    background-color: whitesmoke;
+    border: 2px solid #2E6178;
+    z-index: 50;
+    display: none;
+}
+.close-btn{
+    width: 20px;
+    height: 20px;
+    border-top: 2px solid #2E6178;
+    border-left: 2px solid #2E6178;
+    color: #2E6178;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Sintony', sans-serif;
+    font-weight: bold;
+}
+.close-btn:hover{
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
+    color: orangered;
+    cursor: pointer;
+}
+input{
+    width: 80%;
+    height: 30px;
+    margin-top: 20px;
+    padding: 6px;
+    font-size: 16px;
+    font-family: 'Sintony', sans-serif;
+    color: #2E6178;
+    border: 1px solid #2E6178;
+    text-align: center;
+}
+textarea{
+    width: 80%;
+    margin-top: 10px;
+    padding: 6px;
+    font-size: 16px;
+    font-family: 'Sintony', sans-serif;
+    color: #2E6178;
+    border: 1px solid #2E6178;
+}
+input:focus{
+    text-align: left;
+}
+input::placeholder{
+    color: grey;
+}
+textarea::placeholder{
+    color: gray;
+}
+.lv-comm{
+    width: 334px;
+    height: 42px;
+    margin-top: 10px;
+    background: #2E6178;
+    color: whitesmoke;
+    border: none;
+    font-family: 'Odibee Sans', cursive;
+    font-size: 20px;
+}
+.lv-comm:hover{
+    background: whitesmoke;
+    color: #2E6178;
+    border: 2px solid #2E6178;
+    cursor: pointer;
+}
+.hide{
+    display: none;
+}
+.show{
+    display: flex;
+}
+.form-comm{
+    display: inline-block;
+    text-align: center;
+}
 @media only screen and (max-width: 1100px) {
     .dest-div{
         margin: 10px;

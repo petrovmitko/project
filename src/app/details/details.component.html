@@ -12,12 +12,12 @@
     </div>
 </div>
 
-<div class="comment-section" *ngIf="comments">
+<div *ngIf="comments" class="comment-section">
     <p class="comm-lable">Comments</p>
     <ul>
         <li *ngFor="let comm of comments">
-            <div class="owner">Mitko</div>
-            <p class="comm-text">{{ comm }}</p>
+            <div class="owner">{{comm | splitPipe }}</div>
+            <p class="comm-text">{{ comm | commentPipe }}</p>
         </li>
     </ul>
 </div>
