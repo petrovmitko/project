@@ -1,45 +1,50 @@
 <div class="cards">
     <div class="common first">
         <div class="hotel">
-            <button class="btnHotelCar" [ngClass]="!hotelORCar ? 'fade' : 'onTop'" (click)="hotelCheck()">HOTEL</button>
-            <button class="btnHotelCar" [ngClass]="hotelORCar ? 'fade' : 'onTop'" (click)="carCheck()">CAR RENTAL</button>
+            <button class="btnHotelCar" [ngClass]="!hotelORCar ? 'fade' : 'onTop'" (click)="hotelCheck()">OPTIONS</button>
+            <button class="btnHotelCar" [ngClass]="hotelORCar ? 'fade' : 'onTop'" (click)="carCheck()">DESTINATION</button>
             <form action="#" [ngClass]="!hotelORCar ? 'hidden' : 'shown'">
-                <label for="hotel">Hotel</label>
+                <label for="hotel">Choose a Hotel</label>
                 <select class="hotelOptions" name="hotel">
                     <option *ngFor="let hotel of hotels" [value]="hotel" >{{ hotel | uppercase}}</option>
                 </select>
-                <app-calendar [ngClass]="!commonService.toggle ? 'hidden' : 'shown'"></app-calendar>
-                <label>Check-in date</label>
-                <div class="check-in" (click)="commonService.changeToggle()" (click)="commonService.getVal('HCI')"><p class="dateForm">{{ this.commonService.dayHCI }}</p></div>
-                <label>Check-out date</label>
-                <div class="check-out" (click)="commonService.changeToggle()" (click)="commonService.getVal('HCO')"><p class="dateForm">{{ this.commonService.dayHCO }}</p></div>
-                <label for="guests">Gests</label>
-                <select name="guests" class="guests">
-                <option *ngFor="let i of numbers" [value]="Guests">{{ i }}</option>
+                <label for="rent-a-car">Rent a Car</label>
+                <select class="hotelOptions" name="rent-a-car">
+                    <option *ngFor="let car of cars" [value]="car" >{{ car }}</option>
+                </select>
+                <label for="guide">Need a Guide</label>
+                <select class="hotelOptions" name="guide">
+                    <option>No</option>
+                    <option>Yes  + 50$</option>
+                </select>
+                <label for="active">Additional Activities</label>
+                <select class="hotelOptions" name="active">
+                    <option>No</option>
+                    <option>Yes + 100$</option>
                 </select>
             </form>
             <form action="#" [ngClass]="hotelORCar ? 'hidden' : 'shown'">
-                <label for="car">Choose a car</label>
-                <select class="hotelOptions" name="car">
-                    <option *ngFor="let car of cars" [value]="car" >{{ car }} persons</option>
+                <label for="dest">Choose a destination</label>
+                <select class="hotelOptions" name="dest">
+                    <option *ngFor="let option of destinationOptions" [value]="option" >{{ option | uppercase}}</option>
                 </select>
                 <app-calendar [ngClass]="!commonService.toggle ? 'hidden' : 'shown'"></app-calendar>
                 <label>Check-in date</label>
                 <div class="check-in" (click)="commonService.changeToggle()" (click)="commonService.getVal('RCI')"><p class="dateForm">{{ this.commonService.dayRCI }}</p></div>
                 <label>Check-out date</label>
                 <div class="check-out" (click)="commonService.changeToggle()" (click)="commonService.getVal('RCO')"><p class="dateForm">{{ this.commonService.dayRCO }}</p></div>
-                <label for="passangers">Passengers</label>
+                <label for="passangers">Persons</label>
                 <select name="passangers" class="passangers">
                 <option *ngFor="let pa of passangers">{{ pa }}</option>
                 </select>
             </form>
         </div>
-        <div class="one"><a class="checkBtn" (click)="commonService.clrValue()">CHECK NOW</a></div>
+        <div class="one"><a class="checkBtn" (click)="commonService.clrValue()">BOOK NOW</a></div>
     </div>
     <div class="common second" [ngStyle]="{'backgroundImage': getUrlS()}">
         <div class="two">
             <p *ngIf="authService.isAut()" class="leftP">{{ collection[0].name }}</p>
-            <p *ngIf="authService.isAut()" class="rightP">{{ collection[0].price }}$</p>
+            <p *ngIf="authService.isAut()" class="rightP">{{ collection[0].price }} $</p>
             <p *ngIf="!authService.isAut()" class="topP">Only registered user can see our prices</p>
             <p *ngIf="!authService.isAut()" class="bottomP"><a routerLink="/login">Join now</a></p>
         </div>
@@ -47,7 +52,7 @@
     <div class="common last" [ngStyle]="{'backgroundImage': getUrlT()}">
         <div class="three">
             <p *ngIf="authService.isAut()" class="leftP">{{ collection[1].name }}</p>
-            <p *ngIf="authService.isAut()" class="rightP">{{ collection[1].price }}$</p>
+            <p *ngIf="authService.isAut()" class="rightP">{{ collection[1].price }} $</p>
             <p *ngIf="!authService.isAut()" class="topP">Only registered users can see our prices</p> 
             <p *ngIf="!authService.isAut()" class="bottomP"><a routerLink="/login">Join now</a></p>
         </div>

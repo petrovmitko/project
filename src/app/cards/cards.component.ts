@@ -13,9 +13,10 @@ import { IDest } from '../destination'
 export class CardsComponent implements OnInit {
   hotelORCar = false
   hotels = ['Hilton', 'Ramada', 'Ibis', 'Holliday-Inn', 'Metropolitan'];
-  cars = ['Small city car - 4', 'SUV 5', 'Family car 5', 'Minivan 7']
+  destinationOptions = ['cancun', 'plitvice lakes', 'maldives', 'santorini', 'barcelona', 'bali']
+  cars = ['No', 'Small city car - 4', 'SUV 5', 'Family car 5', 'Minivan 6 + 1', 'Bus 8 + 1']
   numbers = Array(8).fill(1).map((x: number, i) => x += i);
-  passangers = Array(7).fill(1).map((y: number, i) => y += i);
+  passangers = Array(12).fill(1).map((y: number, i) => y += i);
   carDefault = 'Choose a car'
   collection: IDest[]
   idDest: any

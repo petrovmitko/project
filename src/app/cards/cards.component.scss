@@ -95,15 +95,32 @@ a:hover{
     color: #404040;
     cursor: pointer;
 }
-.hotelOptions, .check-in, .check-out, .guests, .passangers{
+.hotelOptions, .passangers{
     width: 240px;
     height: 30px;
-    margin-top: 6px;
     margin-left: 20px;
+    margin-bottom: 10px;
     background: greenyellow;
     color:  #2E6178;
     font-family: 'Sintony', sans-serif;
     outline: none;
+}
+.check-in, .check-out{
+    width: 240px;
+    height: 30px;
+    margin-left: 20px;
+    margin-top: -12px;
+    margin-bottom: 10px;
+    background: greenyellow;
+    color:  #2E6178;
+    font-family: 'Sintony', sans-serif;
+    outline: none;
+}
+label{
+    margin-left: 60px;
+    font-size: 12px;
+    font-family: 'Dosis', sans-serif;
+    color:#2E6178;
 }
 .dateForm{
     text-align: center;
@@ -114,8 +131,8 @@ a:hover{
     height: 40px;
     border: none;
     outline: none;
-    font-weight: bold;
-    color: #404040;
+    font-weight: 700;
+    color: #2E6178;
 }
 .fade{
     background: yellow;
@@ -134,15 +151,7 @@ a:hover{
 .shown{
     display: block;
 }
-label{
-    margin: 0px;
-    padding: 0px;
-    margin-top: 14px;
-    margin-left: 60px;
-    font-size: 12px;
-    font-family: 'Dosis', sans-serif;
-    color:#2E6178;
-}
+
 @media only screen and (max-width: 900px) {
     .cards{
         display: block;
