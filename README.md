@@ -1,6 +1,6 @@
 
 
-# Project - Angular Course Project
+# Project - Angular Course Project - Travel Agency
  
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.22.
 
