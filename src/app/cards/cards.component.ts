@@ -14,7 +14,7 @@ export class CardsComponent implements OnInit {
   hotelORCar = false
   hotels = ['Hilton', 'Ramada', 'Ibis', 'Holliday-Inn', 'Metropolitan'];
   destinationOptions = ['cancun', 'plitvice lakes', 'maldives', 'santorini', 'barcelona', 'bali']
-  cars = ['No', 'Small city car - 4', 'SUV 5', 'Family car 5', 'Minivan 6 + 1', 'Bus 8 + 1']
+  cars = ['No', 'Small city car - 4 persons', 'SUV 5 persons', 'Family car 5 persons', 'Minivan 6 + 1 persons', 'Bus 8 + 1 persons']
   numbers = Array(8).fill(1).map((x: number, i) => x += i);
   passangers = Array(12).fill(1).map((y: number, i) => y += i);
   carDefault = 'Choose a car'
