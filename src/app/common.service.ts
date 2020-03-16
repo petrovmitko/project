@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { AuthService } from './auth.service';
-// import { Observable } from 'rxjs'
-// import { IDest } from './destination';
 
 const baseUrl = 'https://travel-agency-48209.firebaseio.com/destinations/'
 
@@ -11,8 +9,6 @@ const baseUrl = 'https://travel-agency-48209.firebaseio.com/destinations/'
 })
 export class CommonService {
   toggle: boolean
-  dayHCI: string  
-  dayHCO: string 
   dayRCI: string 
   dayRCO: string 
   r: string
@@ -31,8 +27,6 @@ export class CommonService {
     return this.r
   }
   clrValue(){
-    this.dayHCI = ''
-    this.dayHCO = '' 
     this.dayRCI = ''
     this.dayRCO = ''
   }

@@ -38,17 +38,27 @@ export class CalendarComponent implements OnInit {
     let d = `${f} / ${this.allMonth.indexOf(this.month) + 1} / ${this.year}`
     this.commonService.toggleFalse()
     let val = this.commonService.sendVal()
-    if(val === 'HCI'){
-      this.commonService.dayHCI = d
-    }
-    else if(val === 'HCO'){
-      this.commonService.dayHCO = d
-    }
-    else if(val === 'RCI'){
+    if(val === 'RCI'){
       this.commonService.dayRCI = d
     }
     else if(val === 'RCO'){
-      this.commonService.dayRCO = d
+      if(this.commonService.dayRCI === ''){
+        return this.commonService.dayRCO = 'set start date'
+      }
+      else if(this.commonService.dayRCI !== ''){
+        let splitStartDate = this.commonService.dayRCI.split(' / ').map(x => Number(x))
+        let splitEndDate = d.split(' / ').map(x => Number(x))
+        if(splitStartDate[2] > splitEndDate[2]){
+          return this.commonService.dayRCO = 'set correct date'
+        }
+        else if(splitStartDate[1] > splitEndDate[1] && splitStartDate[2] >= splitEndDate[2]){
+          return this.commonService.dayRCO = 'set correct date'
+        }
+        else if(splitStartDate[0] > splitEndDate[0] && splitStartDate[1] >= splitEndDate[1] && splitStartDate[2] >= splitEndDate[2]){
+          return this.commonService.dayRCO = 'set correct date'
+        }
+      }
+      return this.commonService.dayRCO = d
     }
   }
 
