@@ -7,6 +7,7 @@ import { Router } from '@angular/router'
 })
 export class AuthService {
   token: string;
+  currentEmail: string | null
   constructor(private router: Router) { }
 
   signUp(email: string, password: string){
@@ -26,6 +27,7 @@ export class AuthService {
       firebase.auth().currentUser.getIdToken()
         .then((token: string) => {this.token = token;})
         .then(() => {
+          this.currentEmail = email
           this.router.navigate(['/main']);
         })
     })
@@ -36,6 +38,7 @@ export class AuthService {
     .then(() => {
       this.router.navigate(['/main'])
       this.token = null
+      this.currentEmail = null
     })
   }
   getToken(){

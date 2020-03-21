@@ -30,6 +30,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { DetailsComponent } from './details/details.component';
 import { SplitPipePipe } from './split-pipe.pipe';
 import { CommentPipePipe } from './comment-pipe.pipe';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 
 
@@ -51,7 +52,8 @@ import { CommentPipePipe } from './comment-pipe.pipe';
     LogoSmallComponent,
     DetailsComponent,
     SplitPipePipe,
-    CommentPipePipe
+    CommentPipePipe,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,
