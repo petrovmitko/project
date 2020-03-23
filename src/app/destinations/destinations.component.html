@@ -4,7 +4,9 @@
             <div class="box-img" [ngStyle]="{'backgroundImage': 'url(' + this.item.imageURL + ')'}"></div>
             <div class="box-txt"><p>{{item.description}}</p></div>
             <div class="box-data">
-                <div class="like" (click)="addLike(item.id)"><i class="far fa-heart"></i></div>
+                <div class="like" (click)="addLike(item.id)">
+                    <i class="far fa-heart"></i>
+                </div>
                 <div class="travel" (click)="fireServiceService.setFireId(item.id)" routerLink="/details/{{item.id}}">Visit {{this.item.name}}</div>
                 <div class="comment" (click)="toggleCommentOpen(item.id)"><i class="far fa-comment"></i></div>
             </div>
@@ -19,3 +21,5 @@
     </form>
     <div class="close-btn" (click)="toggleCommentClose()">X</div>
 </div>
+<!-- <i class="far fa-check-circle fa-8x"></i> -->
+<i class="fab fa-gratipay fa-8x"></i>

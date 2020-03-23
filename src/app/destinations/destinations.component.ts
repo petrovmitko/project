@@ -15,6 +15,7 @@ export class DestinationsComponent implements OnInit {
   data: IDest[]
   currentDestId: string
   commToggle: boolean = false
+  changClass = false
   constructor(private authService: AuthService, 
               private fireServiceService: FireServiceService,
               private commonService: CommonService,
@@ -27,6 +28,7 @@ export class DestinationsComponent implements OnInit {
       })
     }
   }
+
   getDetails(x: string){
     let ind = this.data.findIndex(f => f.id === x)
     return this.data[ind]
@@ -41,6 +43,12 @@ export class DestinationsComponent implements OnInit {
         return this.afs.doc(`destinations/${iTid}`).update({likes: likes})
       })
     })
+
+      const b = <HTMLElement>document.querySelector('.fa-gratipay');
+      b.style.display = 'flex'
+      setTimeout(() => {
+        b.style.display = 'none'
+      }, 1000);
   }
   toggleCommentOpen(itemId){
     this.commToggle = true

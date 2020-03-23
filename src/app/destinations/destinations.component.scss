@@ -13,6 +13,15 @@
     margin: 30px;
     position: relative; 
 }
+.fa-gratipay{
+    position: fixed;
+    top: 70%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    color: #2E6178;
+    display: none;
+}
 .box-img{
     width: 180px;
     height: 100%;
@@ -82,7 +91,7 @@
 .like:hover, .travel:hover, .comment:hover{
     color: rgb(16, 170, 241);
     cursor: pointer;
-} 
+}
 p{
     margin: 10px;
     font-family: 'Sintony', sans-serif;
