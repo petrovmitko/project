@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-contacts',
   templateUrl: './contacts.component.html',
@@ -11,5 +11,7 @@ export class ContactsComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  clrValues(x: NgForm){
+    x.reset()
+  }
 }

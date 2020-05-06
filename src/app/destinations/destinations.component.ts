@@ -60,6 +60,9 @@ export class DestinationsComponent implements OnInit {
   sendComment(form: NgForm){
     const name = form.value.name
     const commentText = form.value.commentText
+    if(!name || !commentText){
+      return 
+    }
 
     let index = this.data.findIndex(f => f.id === this.currentDestId)
     let collection = this.data[index]
